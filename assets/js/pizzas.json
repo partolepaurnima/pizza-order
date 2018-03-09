@@ -1,0 +1,108 @@
+{
+	"pizza": [
+		{	
+			"name": "Margherita",
+			"size": "Medium",
+			"price": {
+				"amount": "275",
+				"currency": "INR"
+			},
+			"ingredients": "Cheese",
+			"veg-nonveg": "Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Classic" 
+		},
+		{	
+			"name": "Chicken Sausage",
+			"size": "Medium",
+			"price": {
+				"amount": "320",
+				"currency": "INR"
+			},
+			"ingredients": "Chicken Sausage, Onion",
+			"veg-nonveg": "Non Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Classic" 
+		},
+		{	
+			"name": "Double Cheese",
+			"size": "Medium",
+			"price": {
+				"amount": "350",
+				"currency": "INR"
+			},
+			"ingredients": "Extra Cheese On Cheese",
+			"veg-nonveg": "Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Popular" 
+		},		
+		{	
+			"name": "Veggie Feast",
+			"size": "Medium",
+			"price": {
+				"amount": "200",
+				"currency": "INR"
+			},
+			"ingredients": "Capsicum, Onion, Sweet Corn",
+			"veg-nonveg": "Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Popular" 
+		},
+		{	
+			"name": "Rawalpindi Chana",
+			"size": "Medium",
+			"price": {
+				"amount": "200",
+				"currency": "INR"
+			},
+			"ingredients": "Chole, Onion, Green Capsicum, Tomato",
+			"veg-nonveg": "Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Popular" 
+		},
+		{	
+			"name": "Chick N Spicy",
+			"size": "Medium",
+			"price": {
+				"amount": "320",
+				"currency": "INR"
+			},
+			"ingredients": "Chicken Hot & Chilly, Capsicum, Mushroom",
+			"veg-nonveg": "Non Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Popular" 
+		},
+		{	
+			"name": "Lebanese Chicken",
+			"size": "Medium",
+			"price": {
+				"amount": "275",
+				"currency": "INR"
+			},
+			"ingredients": "Aromatic Lebanese Chicken, Mushroom & Capsicum",
+			"veg-nonveg": "Non Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Popular" 
+		},
+		{	
+			"name": "Marghe",
+			"size": "Medium",
+			"price": {
+				"amount": "275",
+				"currency": "INR"
+			},
+			"ingredients": "Cheese",
+			"veg-nonveg": "Veg",
+			"crush": "Pan",
+			"image": "",
+			"category": "Classic" 
+		}
+	]
+}
