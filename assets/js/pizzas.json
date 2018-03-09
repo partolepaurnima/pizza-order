@@ -9,7 +9,7 @@
 			},
 			"ingredients": "Cheese",
 			"veg-nonveg": "Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Classic" 
 		},
@@ -22,7 +22,7 @@
 			},
 			"ingredients": "Chicken Sausage, Onion",
 			"veg-nonveg": "Non Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Classic" 
 		},
@@ -35,7 +35,7 @@
 			},
 			"ingredients": "Extra Cheese On Cheese",
 			"veg-nonveg": "Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Popular" 
 		},		
@@ -48,7 +48,7 @@
 			},
 			"ingredients": "Capsicum, Onion, Sweet Corn",
 			"veg-nonveg": "Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Popular" 
 		},
@@ -61,7 +61,7 @@
 			},
 			"ingredients": "Chole, Onion, Green Capsicum, Tomato",
 			"veg-nonveg": "Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Popular" 
 		},
@@ -74,7 +74,7 @@
 			},
 			"ingredients": "Chicken Hot & Chilly, Capsicum, Mushroom",
 			"veg-nonveg": "Non Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Popular" 
 		},
@@ -87,7 +87,7 @@
 			},
 			"ingredients": "Aromatic Lebanese Chicken, Mushroom & Capsicum",
 			"veg-nonveg": "Non Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Popular" 
 		},
@@ -100,7 +100,7 @@
 			},
 			"ingredients": "Cheese",
 			"veg-nonveg": "Veg",
-			"crush": "Pan",
+			"crust": "Pan",
 			"image": "",
 			"category": "Classic" 
 		}
