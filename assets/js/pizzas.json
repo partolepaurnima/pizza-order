@@ -10,7 +10,7 @@
 			"ingredients": "Cheese",
 			"veg-nonveg": "Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/margherita.png",
 			"category": "Classic" 
 		},
 		{	
@@ -23,7 +23,7 @@
 			"ingredients": "Chicken Sausage, Onion",
 			"veg-nonveg": "Non Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/chicken-sausage.png",
 			"category": "Classic" 
 		},
 		{	
@@ -36,7 +36,7 @@
 			"ingredients": "Extra Cheese On Cheese",
 			"veg-nonveg": "Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/double-cheese-pizza.jpg",
 			"category": "Popular" 
 		},		
 		{	
@@ -49,7 +49,7 @@
 			"ingredients": "Capsicum, Onion, Sweet Corn",
 			"veg-nonveg": "Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/margherita.png",
 			"category": "Popular" 
 		},
 		{	
@@ -62,7 +62,7 @@
 			"ingredients": "Chole, Onion, Green Capsicum, Tomato",
 			"veg-nonveg": "Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/margherita.png",
 			"category": "Popular" 
 		},
 		{	
@@ -75,7 +75,7 @@
 			"ingredients": "Chicken Hot & Chilly, Capsicum, Mushroom",
 			"veg-nonveg": "Non Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/chicken-sausage.png",
 			"category": "Popular" 
 		},
 		{	
@@ -88,7 +88,7 @@
 			"ingredients": "Aromatic Lebanese Chicken, Mushroom & Capsicum",
 			"veg-nonveg": "Non Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/margherita.png",
 			"category": "Popular" 
 		},
 		{	
@@ -101,7 +101,7 @@
 			"ingredients": "Cheese",
 			"veg-nonveg": "Veg",
 			"crust": "Pan",
-			"image": "",
+			"image": "assets/images/margherita.png",
 			"category": "Classic" 
 		}
 	]
