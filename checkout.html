@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Pizza | Home</title>
+		<title>Pizza | Checkout</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
@@ -23,7 +23,7 @@
 					<span class="hamburger"></span>
 					<nav class="main-nav">
 						<ul>
-							<li class="active"><a href="index.html" title="Home">home</a></li>
+							<li><a href="index.html" title="Home">home</a></li>
 							<li><a href="our-menu.html" title="Our Menu">our menu</a></li>
 							<li><a href="#" title="About Us">about us</a></li>
 							<li><a href="#" title="Contact Us">contact us</a></li>
@@ -34,37 +34,25 @@
 		</div>
 	</header>
 	<main>
-		<!-- banner slider section -->
-		<div class="banner-slider">
-			<ul>
-				<li><img src="assets/images/banner-img1.jpg" alt="Image1"></li>
-				<li><img src="assets/images/banner-img2.jpg" alt="Image2"></li>
-				<li><img src="assets/images/banner-img3.jpg" alt="Image3"></li>
-			</ul>
-			<ul class="carousel">
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<span class="arrow prev">Prev</span>
-			<span class="arrow next">Next</span>
+		<!-- banner section for our menu-->
+		<div class="banner-pizza-list">
+			<img src="assets/images/banner-img3.jpg" alt="Image3">
 		</div>
 		<div class="content-block">
 			<div class="wrapper">
-				<!-- Most popular pizza list -->
-				<section class="most-popular content">
-					<h2>most popular</h2>
-					<ul id="most-popular" class="pizza-listing most-popular">
+				<!-- our menu list -->
+				<div class="our-menu">
+					<ul class="sort-list" id="sort-list">
+						<li><a href="#">veg</a></li>
+						<li><a href="#">non veg</a></li>
+						<li><a href="#">popular</a></li>
+						<li><a href="#">classic</a></li>
+						<li><a href="#">select all</a></li>
+					</ul>
+					<ul id="pizza-menu" class="pizza-menu">
 						<!-- list will append using script -->
 					</ul>
-
-				</section>
-				<section class="classic content">
-					<h2>classic</h2>
-					<ul class="pizza-listing classic">
-						<!-- list will append using script -->
-					</ul>
-				</section>
+				</div>
 			</div>
 		</div>
 	</main>
