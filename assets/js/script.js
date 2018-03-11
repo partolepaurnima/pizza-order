@@ -118,15 +118,6 @@ $(function() {
 					});
 
 				});
-
-				
-
-
-
-				// $('body').click(function() {
-				// 	alert('hell00');
-					// $('#order-delivery').removeClass('visible');
-				// })
 			}
 		});
 	}
@@ -164,7 +155,6 @@ $(function() {
 
 
 	// filter list
-
 	$('#sort-list li').click(function(e) {
 		$('#sort-list li').removeClass('active-filter');
 		e.preventDefault();
@@ -177,5 +167,11 @@ $(function() {
 			}
 		});
 	});
+
+	//Hamburger
+	$('.hamburger').click(function() {
+		$('.hamburger').toggleClass('close');
+		$('nav').toggleClass('expanded');
+	});	
 
 });
