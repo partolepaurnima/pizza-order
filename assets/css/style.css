@@ -153,7 +153,27 @@ nav ul li a:hover, .search:hover, .cart:hover, nav .active a {
 
 .cart { margin-left: 20px; }
 
-.visible { display: block; }
+.visible, .grand-total.visible, .order-delivery.visible { display: block; }
+
+.order-delivery {
+	display: none;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  z-index: 4;
+  color: #000;
+  transform: translate(-50%);
+  padding: 38px 20px;
+  box-sizing: border-box;
+  border: 2px solid #000;
+}
+
+.order-delivery	p {
+	text-align: center;
+}
 
 .search-form {
 	position: absolute;
@@ -279,7 +299,7 @@ nav ul li a:hover, .search:hover, .cart:hover, nav .active a {
   font-size: 15px;
 }
 
-.pizza-listing li .label {
+.pizza-listing li .label, .label {
 	text-transform: capitalize;
   font-weight: 600;
 }
@@ -405,3 +425,69 @@ footer {
 	display: inline-block;
 }
 
+h2 { 
+	font-size: 25px;
+  text-transform: uppercase;
+  line-height: 31px;
+  display: inline-block;
+  border-bottom: 1px solid #000; 
+}
+
+.checkout .content-block {
+ 	margin-top: 30px;
+}
+
+.pizza-order li { 
+ 	width: 25%;
+ 	font-size: 14px;
+ 	display: block;
+ 	margin: 0;
+ 	border: 1px solid #000;
+ 	padding: 10px;
+ 	margin-bottom: 20px;
+}
+
+.pizza-order li h3 { font-size: 15px; }
+
+.confirm { 
+	display: none;
+	background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer; 
+}
+
+.confirm:hover {
+	background: #fff;
+	border-color: #000;
+	color: #000;
+	border: 1px solid #000;
+}
+.grand-total { display: none; }
+
+.confirm.visible { display: inline-block; }
+
+.empty { 
+	text-align: center;
+  margin-top: 30px; 
+}
+
+.discount { 
+	margin-left: 20px;
+}
+
+.strikeout {
+	text-decoration: line-through;
+}
+
+.checkout .content-block { position: relative; }
+
+.label , .label-value { font-size: 15px; }
+
+/*.overflow-hidden { overflow: hidden; }*/
