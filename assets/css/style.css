@@ -161,12 +161,12 @@ nav ul li a:hover, .search:hover, .cart:hover, nav .active a {
   background: #fff;
   top: 50%;
   left: 50%;
-  width: 40%;
-  height: 40%;
+  width: 70%;
+  height: auto;
   z-index: 4;
   color: #000;
   transform: translate(-50%);
-  padding: 38px 20px;
+  padding: 20px 20px;
   box-sizing: border-box;
   border: 2px solid #000;
 }
@@ -328,6 +328,7 @@ nav ul li a:hover, .search:hover, .cart:hover, nav .active a {
   bottom: 0;
   padding: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .cart-overlay .label, .cart-overlay .label-value { color: #fff; }
@@ -380,6 +381,8 @@ footer {
 	text-decoration: none;
 }
 
+.social-share li a:hover { opacity: 0.5; }
+
 .back-top {
 	position: fixed;
   bottom: 0;
@@ -425,7 +428,10 @@ footer {
 	display: inline-block;
 }
 
-h2 { 
+
+/********checkout page**************/
+
+.checkout h2 { 
 	font-size: 25px;
   text-transform: uppercase;
   line-height: 31px;
@@ -490,4 +496,72 @@ h2 {
 
 .label , .label-value { font-size: 15px; }
 
-/*.overflow-hidden { overflow: hidden; }*/
+/**********hamburger********/
+.hamburger { 
+	display: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.close:before {
+	content: '\f00d';;
+}
+
+.expanded {
+	display: block;
+	position: absolute;
+	top: 72px;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	background: #000;
+}
+
+.expanded li {
+	display: block;
+	margin: 0;
+	padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.hamburger { display: inline-block; }
+
+	nav { display: none; }
+
+	.navigation, .search { float: right; }
+
+	.cart-search, .cart { float: left; }
+
+	.search { margin-left: 20px; }
+	
+	.cart { margin-left: 0; }
+
+	.navigation { border: none; }
+
+	.pizza-listing li { 
+		display: block;
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.pizza-listing li:nth-of-type(3n - 2) { margin-left: auto; }
+
+	.pizza-menu .visible { display: block; }
+}
+
+
+@media screen and (max-width: 540px) {
+	.sort-list { text-align: center; }
+
+	.sort-list	li { margin-bottom: 10px; }
+
+	.copyright, .social-share { 
+		float: none; 
+		text-align: center;
+		display: block;
+	}
+
+	.social-share { margin-top: 20px; }
+
+}
