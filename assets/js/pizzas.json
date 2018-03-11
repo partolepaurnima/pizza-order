@@ -8,7 +8,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Cheese",
-			"veg-nonveg": "Veg",
+			"vegNonveg": "Veg",
 			"crust": "Pan",
 			"image": "assets/images/margherita.png",
 			"category": "Classic" 
@@ -21,7 +21,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Chicken Sausage, Onion",
-			"veg-nonveg": "Non Veg",
+			"vegNonveg": "Non Veg",
 			"crust": "Pan",
 			"image": "assets/images/chicken-sausage.png",
 			"category": "Classic" 
@@ -34,7 +34,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Extra Cheese On Cheese",
-			"veg-nonveg": "Veg",
+			"vegNonveg": "Veg",
 			"crust": "Pan",
 			"image": "assets/images/chicken-sausage.png",
 			"category": "Popular" 
@@ -47,7 +47,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Capsicum, Onion, Sweet Corn",
-			"veg-nonveg": "Veg",
+			"vegNonveg": "Veg",
 			"crust": "Pan",
 			"image": "assets/images/margherita.png",
 			"category": "Popular" 
@@ -60,7 +60,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Chole, Onion, Green Capsicum, Tomato",
-			"veg-nonveg": "Veg",
+			"vegNonveg": "Veg",
 			"crust": "Pan",
 			"image": "assets/images/margherita.png",
 			"category": "Popular" 
@@ -73,7 +73,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Chicken Hot & Chilly, Capsicum, Mushroom",
-			"veg-nonveg": "Non Veg",
+			"vegNonveg": "Non Veg",
 			"crust": "Pan",
 			"image": "assets/images/chicken-sausage.png",
 			"category": "Popular" 
@@ -86,7 +86,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Aromatic Lebanese Chicken, Mushroom & Capsicum",
-			"veg-nonveg": "Non Veg",
+			"vegNonveg": "Non Veg",
 			"crust": "Pan",
 			"image": "assets/images/margherita.png",
 			"category": "Popular" 
@@ -99,7 +99,7 @@
 				"currency": "INR"
 			},
 			"ingredients": "Cheese",
-			"veg-nonveg": "Veg",
+			"vegNonveg": "Veg",
 			"crust": "Pan",
 			"image": "assets/images/margherita.png",
 			"category": "Classic" 
