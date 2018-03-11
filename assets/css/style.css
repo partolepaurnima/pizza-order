@@ -79,3 +79,63 @@ table {
 .clearfix {
 	*zoom: 1;
 }
+
+.container {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 96%;
+	margin: 0 auto;
+}
+
+header {
+	height: 110px;
+	box-sizing: border-box;
+	background: rgba(0,0,0, 0.75);
+}
+
+header h1,  .cart-search{
+	padding: 30px 0 30px;
+}
+
+.left { float: left; }
+
+.right { float: right; }
+
+.hidden { display: none; }
+
+.navigation { 
+	border-right: 1px solid #ccc;
+	height: 100%;
+  padding: 47px 20px 47px 0;
+  box-sizing: border-box;
+}
+
+nav ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+	margin-right: -5px;
+}
+
+nav ul li:first-of-type { margin-left: 0; }
+
+nav ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 16px;
+  line-height: 23px;
+  display: block;
+}
+
+nav ul li a:hover {
+	color: #a29b9b;
+}
+
+.cart-search { 
+	padding-left: 20px;
+	padding-right: 20px; 
+}
