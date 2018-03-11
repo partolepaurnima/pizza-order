@@ -395,4 +395,12 @@ footer {
   line-height: 21px;
 }
 
-.sort-list li a:hover { color: #000; }
+.sort-list li a:hover, .sort-list .active-filter a { color: #000; }
+
+.pizza-menu li {
+	display: none;
+}
+
+.pizza-menu .visible {
+	display: inline-block;
+}
