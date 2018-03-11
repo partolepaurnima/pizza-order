@@ -59,6 +59,18 @@ $(function() {
 		}
 	});
 
+	//To append indication on cart link that list is not empty
+	$.getJSON('php/order.json',function(data){
+  	if(data.pizza[0]) {
+  		console.log('true');
+  		$('.cart').addClass('item-present');
+  	}
+  	else {
+  		$('.cart').removeClass('item-present');
+  	}
+  	// console.log('length', data.pizza[0]);
+	});
+
 
 
 	// AJAX call to create dynamic structure on checkout page
@@ -69,7 +81,7 @@ $(function() {
 			type: 'get',
 			cache: false,
 			success: function(data) {
-				console.log(data);
+				// console.log(data);
 				allDataArray = [];
 				var total = [];
 		
