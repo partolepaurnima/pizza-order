@@ -153,6 +153,14 @@ nav ul li a:hover, .search:hover, .cart:hover, nav .active a {
 
 .cart { margin-left: 20px; }
 
+.item-present:after {
+	content: '\f111';
+  color: #ff0000;
+  font-size: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .visible, .grand-total.visible, .order-delivery.visible { display: block; }
 
 .order-delivery {
@@ -497,13 +505,13 @@ footer {
 .label , .label-value { font-size: 15px; }
 
 /**********hamburger********/
-.hamburger { 
+.navigation .hamburger { 
 	display: none;
 	color: #fff;
 	cursor: pointer;
 }
 
-.close:before {
+.navigation .close:before {
 	content: '\f00d';;
 }
 
@@ -524,7 +532,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-	.hamburger { display: inline-block; }
+	.navigation .hamburger { display: inline-block; }
 
 	nav { display: none; }
 
@@ -548,6 +556,10 @@ footer {
 	.pizza-listing li:nth-of-type(3n - 2) { margin-left: auto; }
 
 	.pizza-menu .visible { display: block; }
+
+	.pizza-order li { width: 25%; }
+
+	.search-form input { width: 70%; }
 }
 
 
