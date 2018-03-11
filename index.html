@@ -2,84 +2,87 @@
 	<head>
 		<title>Pizza | Home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-	<!-- header section -->
-	<header>
-		<div class="wrapper">
-			<div class="left">
-				<h1><a href="index.html" title="Pizza Hub"><img src="assets/images/pizzahub-logo.png" alt="Pizza Hub"></a></h1>
-			</div>
-			<div class="right">
-				<div class="cart-search">
-					<span class="search"></span>
-					<a href="checkout.html" class="cart" id="cart">cart</a>
-					<form action="#" class="search">
-						<input type="text" placeholder="Search here">
-					</form>
+		<div class="container">
+		<!-- header section -->
+		<header>
+			<div class="wrapper clearfix">
+				<div class="left">
+					<h1><a href="index.html" title="Pizza Hub"><img src="assets/images/pizzahub-logo.png" alt="Pizza Hub"></a></h1>
 				</div>
-				<div class="navigation">
-					<span class="hamburger"></span>
-					<nav class="main-nav">
-						<ul>
-							<li class="active"><a href="index.html" title="Home">home</a></li>
-							<li><a href="our-menu.html" title="Our Menu">our menu</a></li>
-							<li><a href="#" title="About Us">about us</a></li>
-							<li><a href="#" title="Contact Us">contact us</a></li>
+				<div class="right clearfix">
+					<div class="cart-search right clearfix">
+						<span class="search left">search</span>
+						<a href="checkout.html" class="cart right" id="cart">cart</a>
+						<form action="#" class="search-form hidden">
+							<input type="text" placeholder="Search here">
+						</form>
+					</div>
+					<div class="navigation left">
+						<span class="hamburger"></span>
+						<nav class="main-nav">
+							<ul>
+								<li class="active"><a href="index.html" title="Home">home</a></li>
+								<li><a href="our-menu.html" title="Our Menu">our menu</a></li>
+								<li><a href="#" title="About Us">about us</a></li>
+								<li><a href="#" title="Contact Us">contact us</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<!-- banner slider section -->
+			<div class="banner-slider">
+				<ul>
+					<li><img src="assets/images/banner-img1.jpg" alt="Image1"></li>
+					<li><img src="assets/images/banner-img2.jpg" alt="Image2"></li>
+					<li><img src="assets/images/banner-img3.jpg" alt="Image3"></li>
+				</ul>
+				<ul class="carousel">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<span class="arrow prev">Prev</span>
+				<span class="arrow next">Next</span>
+			</div>
+			<div class="content-block">
+				<div class="wrapper">
+					<!-- Most popular pizza list -->
+					<section class="most-popular content">
+						<h2>most popular</h2>
+						<ul id="most-popular" class="pizza-listing most-popular">
+							<!-- list will append using script -->
 						</ul>
-					</nav>
+
+					</section>
+					<section class="classic content">
+						<h2>classic</h2>
+						<ul id="classic" class="pizza-listing classic">
+							<!-- list will append using script -->
+						</ul>
+					</section>
 				</div>
 			</div>
-		</div>
-	</header>
-	<main>
-		<!-- banner slider section -->
-		<div class="banner-slider">
-			<ul>
-				<li><img src="assets/images/banner-img1.jpg" alt="Image1"></li>
-				<li><img src="assets/images/banner-img2.jpg" alt="Image2"></li>
-				<li><img src="assets/images/banner-img3.jpg" alt="Image3"></li>
-			</ul>
-			<ul class="carousel">
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<span class="arrow prev">Prev</span>
-			<span class="arrow next">Next</span>
-		</div>
-		<div class="content-block">
+		</main>
+		<footer>
 			<div class="wrapper">
-				<!-- Most popular pizza list -->
-				<section class="most-popular content">
-					<h2>most popular</h2>
-					<ul id="most-popular" class="pizza-listing most-popular">
-						<!-- list will append using script -->
-					</ul>
-
-				</section>
-				<section class="classic content">
-					<h2>classic</h2>
-					<ul id="classic" class="pizza-listing classic">
-						<!-- list will append using script -->
-					</ul>
-				</section>
+				<small class="copyright">Copyright 2013-2018 Pizza Hub - All Rights Reserved.</small>
+				<ul class="social-share">
+					<li><a href="#" title="Facebook" target="_blank" class="facebook">facebook</a></li>
+					<li><a href="#" title="Twitter" target="_blank" class="twitter">twitter</a></li>
+					<li><a href="#" title="Instagram" target="_blank" class="instagram">instagram</a></li>
+					<li><a href="#" title="Pinterest" target="_blank" class="pinterest">pinterest</a></li>
+				</ul>
+				<a href="#" title="Back to Top" class="back-top">back to top</a>
 			</div>
-		</div>
-	</main>
-	<footer>
-		<div class="wrapper">
-			<small class="copyright">Copyright 2013-2018 Pizza Hub - All Rights Reserved.</small>
-			<ul class="social-share">
-				<li><a href="#" title="Facebook" target="_blank" class="facebook">facebook</a></li>
-				<li><a href="#" title="Twitter" target="_blank" class="twitter">twitter</a></li>
-				<li><a href="#" title="Instagram" target="_blank" class="instagram">instagram</a></li>
-				<li><a href="#" title="Pinterest" target="_blank" class="pinterest">pinterest</a></li>
-			</ul>
-			<a href="#" title="Back to Top" class="back-top">back to top</a>
-		</div>
-	</footer>
+		</footer>
+	</div>
 	<!-- Scripts -->
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
