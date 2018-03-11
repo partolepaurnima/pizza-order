@@ -235,3 +235,97 @@ nav ul li a:hover, .search:hover, .cart:hover {
 }
 
 .flex-nav-next { margin-top: 20px; }
+
+
+/************main content***************/
+
+.content-block .content{
+	padding-top: 50px;
+}
+
+.content-block .content h2 {
+	font-size: 25px;
+	text-transform: uppercase;
+	line-height: 31px;
+	text-align: center;
+}
+
+.pizza-listing { margin-top: 30px; }
+
+.pizza-listing li {
+	display: inline-block;
+  width: 32%;
+  vertical-align: top;
+  margin-left: 2%;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.pizza-listing li h3 {
+	font-weight: 600;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.pizza-listing li .ingredients {
+	font-size: 14px;
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.pizza-listing li div {
+	margin-top: 10px;
+  font-size: 15px;
+}
+
+.pizza-listing li .label {
+	text-transform: capitalize;
+  font-weight: 600;
+}
+
+.pizza-listing li .label-value { text-transform: capitalize; }
+
+.pizza-listing li:nth-of-type(3n - 2) {
+	margin-left: 0;
+}
+
+.pizza-listing li img { width: 100%; }
+
+.grid-3 li:nth-of-type(1n+4) { display: none; }
+
+.category {
+	font-style: italic;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.cart-overlay { 
+	display: none;
+	background: #000;
+	position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.cart-overlay .label, .cart-overlay .label-value { color: #fff; }
+
+.add-cart {
+  display: block;
+  text-transform: uppercase;
+	text-decoration: none;
+  margin-top: 10px;
+  background: #fff;
+  color: #000;
+  padding: 10px;
+}
+/*
+.add-cart:hover {
+	background: #000;
+	color: #fff;
+	outline: 1px solid #fff;
+}*/
+
+.pizza-listing li:hover .cart-overlay { display: block; }
