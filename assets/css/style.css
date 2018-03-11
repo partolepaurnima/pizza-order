@@ -138,7 +138,7 @@ nav ul li a {
   display: block;
 }
 
-nav ul li a:hover, .search:hover, .cart:hover {
+nav ul li a:hover, .search:hover, .cart:hover, nav .active a {
 	color: #a29b9b;
 }
 
@@ -404,3 +404,4 @@ footer {
 .pizza-menu .visible {
 	display: inline-block;
 }
+
