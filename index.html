@@ -3,21 +3,22 @@
 		<title>Pizza | Home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
 		<div class="container">
 		<!-- header section -->
-		<header>
+		<header class="fixed">
 			<div class="wrapper clearfix">
 				<div class="left">
 					<h1><a href="index.html" title="Pizza Hub"><img src="assets/images/pizzahub-logo.png" alt="Pizza Hub"></a></h1>
 				</div>
 				<div class="right clearfix">
 					<div class="cart-search right clearfix">
-						<span class="search left">search</span>
-						<a href="checkout.html" class="cart right" id="cart">cart</a>
-						<form action="#" class="search-form hidden">
+						<span class="search left fa fa-search" id="search"></span>
+						<a href="checkout.html" class="cart right fa fa-shopping-cart" id="cart"></a>
+						<form action="#" class="search-form hidden" id="search-form">
 							<input type="text" placeholder="Search here">
 						</form>
 					</div>
@@ -37,19 +38,19 @@
 		</header>
 		<main>
 			<!-- banner slider section -->
-			<div class="banner-slider">
-				<ul>
+			<div class="banner-slider flexslider">
+				<ul class="slides">
 					<li><img src="assets/images/banner-img1.jpg" alt="Image1"></li>
 					<li><img src="assets/images/banner-img2.jpg" alt="Image2"></li>
 					<li><img src="assets/images/banner-img3.jpg" alt="Image3"></li>
 				</ul>
-				<ul class="carousel">
+				<!-- <ul class="carousel">
 					<li></li>
 					<li></li>
 					<li></li>
 				</ul>
 				<span class="arrow prev">Prev</span>
-				<span class="arrow next">Next</span>
+				<span class="arrow next">Next</span> -->
 			</div>
 			<div class="content-block">
 				<div class="wrapper">
@@ -88,6 +89,7 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+	<script src="assets/vendor/jquery.flexslider-min.js"></script>
 	<script src="assets/js/script.js"></script>
 	</body>
 </html>
