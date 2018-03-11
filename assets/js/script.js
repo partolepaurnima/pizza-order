@@ -43,7 +43,6 @@ $(function() {
 
       // On click on individual add to cart
 			$('.add-cart').click(function(e) {
-				// e.preventDefault();
 				var attrData = JSON.parse($(this).attr('data-select'));
 				$.ajax({
 					url: 'php/order.php',
@@ -68,7 +67,6 @@ $(function() {
   	else {
   		$('.cart').removeClass('item-present');
   	}
-  	// console.log('length', data.pizza[0]);
 	});
 
 
@@ -81,17 +79,13 @@ $(function() {
 			type: 'get',
 			cache: false,
 			success: function(data) {
-				// console.log(data);
 				allDataArray = [];
 				var total = [];
-		
 				$(data.pizza).each(function(index, value) {
 					if($('.checkout').length > 0) {						
 						total.push(value.price.amount); 
 						all = '<li><img src='+value.image+' alt='+value.name+'><h3>'+value.name+'</h3><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span></div><span class="label">Quantity: </span><span class="label-value">1</span></li>';
 						$(all).appendTo('#pizza-order');
-						// allDataArray.push(JSON.stringify(value));
-						// appendDataSelect(allDataArray, '#pizza-order');
 						$('.empty').addClass('hidden');
 						$('.grand-total').addClass('visible');
 					}
@@ -99,6 +93,7 @@ $(function() {
 				for( i=0; i<total.length;i++) {
 					sum = Number(total[i]) + Number(sum); 
 				}
+
 				///discount
 				if(sum > 500) {
 					$('#total').text(sum+ ' INR');
