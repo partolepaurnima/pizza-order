@@ -23,7 +23,6 @@ $(function() {
 					popularDataArray.push(JSON.stringify(value));
 					appendDataSelect(popularDataArray, '#most-popular');
 				} else if(value.category == 'Classic') {
-					// console.log(value);
 					classic = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
 					$(classic).appendTo('#classic');
 					classicDataArray.push(JSON.stringify(value));
@@ -36,18 +35,12 @@ $(function() {
 					appendDataSelect(allDataArray, '#pizza-menu');
 				}
 			});
-			// function to set data-select attribute in HTML
-			function appendDataSelect(array, idSelector) {
-				for(var i=0; i<=array.length; i++) {
-					$(''+idSelector+' li:eq('+i+') .add-cart').attr('data-select', array[i]);
-				}
-			}
+
+
       // On click on individual add to cart
 			$('.add-cart').click(function(e) {
 				e.preventDefault();
-				console.log(this);
 				var attrData = JSON.parse($(this).attr('data-select'));
-				console.log(attrData);
 				$.ajax({
 					url: 'php/order.php',
 					dataType: 'json',
@@ -62,5 +55,45 @@ $(function() {
 		}
 	});
 
+
+
+	// AJAX call to create dynamic structure on checkout page
+	if($('.checkout').length > 0) {
+		$.ajax({
+			url: 'php/order.json',
+			dataType: 'json',
+			type: 'get',
+			cache: 'false',
+			success: function(data) {
+				console.log(data);
+				allDataArray = [];
+				$(data.pizza).each(function(index, value) {
+					if($('.checkout').length > 0) {						
+						all = '<li><img src='+value.image+' alt='+value.name+'><h3>'+value.name+'</h3><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span></div><span class="label">Quantity: </span><span class="label-value">1</span></li>';
+						$(all).appendTo('#pizza-order');
+						// allDataArray.push(JSON.stringify(value));
+						// appendDataSelect(allDataArray, '#pizza-order');
+					}
+				});	
+				$('.confirm').addClass('visible');
+				$('.confirm').click(function() {
+					// $('#order-delivery').addClass('visible');
+					alert('your order will be deliver in xx minutes');
+				});
+				// $('body').click(function() {
+				// 	alert('hell00');
+					// $('#order-delivery').removeClass('visible');
+				// })
+			}
+		});
+	}
+
+
+	// function to set data-select attribute in HTML
+	function appendDataSelect(array, idSelector) {
+		for(var i=0; i<=array.length; i++) {
+			$(''+idSelector+' li:eq('+i+') .add-cart').attr('data-select', array[i]);
+		}
+	}
 
 });
