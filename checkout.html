@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
-	<body>
+	<body class="checkout">
 	<!-- header section -->
 	<header>
 		<div class="wrapper">
@@ -14,7 +14,7 @@
 			<div class="right">
 				<div class="cart-search">
 					<span class="search"></span>
-					<a href="checkout.html" class="cart" id="cart"></a>
+					<a href="checkout.html" class="cart" id="cart">cart</a>
 					<form action="#" class="search">
 						<input type="text" placeholder="Search here">
 					</form>
@@ -41,17 +41,13 @@
 		<div class="content-block">
 			<div class="wrapper">
 				<!-- our menu list -->
-				<div class="our-menu">
-					<ul class="sort-list" id="sort-list">
-						<li><a href="#">veg</a></li>
-						<li><a href="#">non veg</a></li>
-						<li><a href="#">popular</a></li>
-						<li><a href="#">classic</a></li>
-						<li><a href="#">select all</a></li>
-					</ul>
-					<ul id="pizza-menu" class="pizza-menu">
+					<ul id="pizza-order" class="pizza-menu">
 						<!-- list will append using script -->
 					</ul>
+					<button class="confirm">Confirm order</button>
+					<div class="order-delivery" id="order-delivery">
+						<p>Your order will be delivered in x minutes</p>
+					</div>
 				</div>
 			</div>
 		</div>
