@@ -17,6 +17,9 @@ $(function() {
 		cache: 'false',
 		success: function(data) {
 			$(data.pizza).each(function(index, value) {
+				var category = value.category.replace(/ /g,"-");
+				category += ' ' + value.vegNonveg.replace(/ /g, "-");
+				category = category.toLowerCase();
 				if(value.category == 'Popular') {
 					mostPopular = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
 					$(mostPopular).appendTo('#most-popular');
@@ -29,7 +32,7 @@ $(function() {
 					appendDataSelect(classicDataArray, '#classic');
 				}
 				if($('.our-menu-page').length > 0) {
-					all = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
+					all = '<li class="'+category+'"><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
 					$(all).appendTo('#pizza-menu');
 					allDataArray.push(JSON.stringify(value));
 					appendDataSelect(allDataArray, '#pizza-menu');
