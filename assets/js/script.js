@@ -79,6 +79,17 @@ $(function() {
 				$('.confirm').click(function() {
 					// $('#order-delivery').addClass('visible');
 					alert('your order will be deliver in xx minutes');
+
+					$.ajax({
+						url: 'php/order-remove.php',
+						type: 'delete',
+						cache: false,
+						success: function() {
+							console.log('done');
+							window.location.replace('index.html');
+						}
+					});
+
 				});
 				// $('body').click(function() {
 				// 	alert('hell00');
