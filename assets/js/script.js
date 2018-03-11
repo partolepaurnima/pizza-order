@@ -107,4 +107,13 @@ $(function() {
 		}
 	}
 
+	$('#search').click(function() {
+		$('#search-form').toggleClass('visible');
+	});
+
+	// flexslider
+	$('.flexslider').flexslider({
+    animation: "slide"
+  });
+
 });
