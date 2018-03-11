@@ -174,7 +174,7 @@ nav ul li a:hover, .search:hover, .cart:hover {
 
 
 /********banner slider***********/
-.banner-slider li img {
+.banner-slider li img, .banner-pizza-list img {
 	width: 100%;
 }
 
@@ -373,3 +373,26 @@ footer {
   margin-right: 1%;
   bottom: 2%;
 }
+
+/****************Filter list on our menu page********************/
+.sort-list { margin-top: 30px; }
+
+.sort-list li {
+	display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+.sort-list li:first-of-type {
+	margin-left: 0;
+}
+
+.sort-list li a {
+	text-decoration: none;
+  text-transform: uppercase;
+  color: #847d7d;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.sort-list li a:hover { color: #000; }
