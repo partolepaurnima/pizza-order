@@ -27,12 +27,12 @@ $(function() {
 					appendDataSelect(popularDataArray, '#most-popular');
 				} else if(value.category == 'Classic') {
 					classic = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
-					$(classic).appendTo('#classic');
+					$(classic).appendTo('#classic-list');
 					classicDataArray.push(JSON.stringify(value));
-					appendDataSelect(classicDataArray, '#classic');
+					appendDataSelect(classicDataArray, '#classic-list');
 				}
 				if($('.our-menu-page').length > 0) {
-					all = '<li class="'+category+'"><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
+					all = '<li class="'+category+' visible all"><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
 					$(all).appendTo('#pizza-menu');
 					allDataArray.push(JSON.stringify(value));
 					appendDataSelect(allDataArray, '#pizza-menu');
@@ -131,6 +131,22 @@ $(function() {
 	$('.back-top').click(function(){
 		$('html, body').animate({scrollTop : 0},800);
 		return false;
+	});
+
+
+	// filter list
+
+	$('#sort-list li').click(function(e) {
+		$('#sort-list li').removeClass('active-filter');
+		e.preventDefault();
+		id = $(this).attr('id');
+		$(this).addClass('active-filter');
+		$('#pizza-menu li').removeClass('visible');
+		$('#pizza-menu li').each(function() {
+			if($(this).hasClass(id)) {
+				$(this).addClass('visible');
+			}
+		});
 	});
 
 });
