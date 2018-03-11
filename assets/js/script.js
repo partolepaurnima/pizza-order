@@ -8,31 +8,32 @@ $(function() {
 	var popularDataArray = [];
 	var classicDataArray = [];
 	var allDataArray = [];
+  var sum = 0;
 
 	//AJAX call to creation dynamic structure on index and our-menu page
 	$.ajax({
 		url: 'assets/js/pizzas.json',
 		dataType: 'json',
 		type: 'get',
-		cache: 'false',
+		cache: false,
 		success: function(data) {
 			$(data.pizza).each(function(index, value) {
 				var category = value.category.replace(/ /g,"-");
 				category += ' ' + value.vegNonveg.replace(/ /g, "-");
 				category = category.toLowerCase();
 				if(value.category == 'Popular') {
-					mostPopular = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
+					mostPopular = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html#pizza-order" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
 					$(mostPopular).appendTo('#most-popular');
 					popularDataArray.push(JSON.stringify(value));
 					appendDataSelect(popularDataArray, '#most-popular');
 				} else if(value.category == 'Classic') {
-					classic = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
+					classic = '<li><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html#pizza-order" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
 					$(classic).appendTo('#classic-list');
 					classicDataArray.push(JSON.stringify(value));
 					appendDataSelect(classicDataArray, '#classic-list');
 				}
 				if($('.our-menu-page').length > 0) {
-					all = '<li class="'+category+' visible all"><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
+					all = '<li class="'+category+' visible all"><img src='+value.image+' alt='+value.name+'><span class="category">'+value.category+'</span><h3>'+value.name+'</h3><span class="ingredients">'+value.ingredients+'</span><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div class="cart-overlay"><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span><a href="checkout.html#pizza-order" title="Add to Cart" class="add-cart">add to cart</a></div></li>';
 					$(all).appendTo('#pizza-menu');
 					allDataArray.push(JSON.stringify(value));
 					appendDataSelect(allDataArray, '#pizza-menu');
@@ -42,14 +43,14 @@ $(function() {
 
       // On click on individual add to cart
 			$('.add-cart').click(function(e) {
-				e.preventDefault();
+				// e.preventDefault();
 				var attrData = JSON.parse($(this).attr('data-select'));
 				$.ajax({
 					url: 'php/order.php',
 					dataType: 'json',
 					type: 'post',
 					data: attrData,
-					cache: 'false',
+					cache: false,
 					success: function(data) {
 						console.log(data);
 					}
@@ -66,22 +67,41 @@ $(function() {
 			url: 'php/order.json',
 			dataType: 'json',
 			type: 'get',
-			cache: 'false',
+			cache: false,
 			success: function(data) {
 				console.log(data);
 				allDataArray = [];
+				var total = [];
+		
 				$(data.pizza).each(function(index, value) {
 					if($('.checkout').length > 0) {						
+						total.push(value.price.amount); 
 						all = '<li><img src='+value.image+' alt='+value.name+'><h3>'+value.name+'</h3><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span></div><span class="label">Quantity: </span><span class="label-value">1</span></li>';
 						$(all).appendTo('#pizza-order');
 						// allDataArray.push(JSON.stringify(value));
 						// appendDataSelect(allDataArray, '#pizza-order');
+						$('.empty').addClass('hidden');
+						$('.grand-total').addClass('visible');
 					}
 				});	
+				for( i=0; i<total.length;i++) {
+					sum = Number(total[i]) + Number(sum); 
+				}
+				///discount
+				if(sum > 500) {
+					$('#total').text(sum+ ' INR');
+					discount = (sum*10)/100;
+					sum = sum - discount;
+					$('#discount').text(sum+ ' INR');
+					$('#total').addClass('strikeout');
+				}
+				else {
+					$('#total').text(sum+ ' INR');
+				}
+				
 				$('.confirm').addClass('visible');
 				$('.confirm').click(function() {
-					// $('#order-delivery').addClass('visible');
-					alert('your order will be deliver in xx minutes');
+					$('.order-delivery').addClass('visible');
 
 					$.ajax({
 						url: 'php/order-remove.php',
@@ -89,11 +109,20 @@ $(function() {
 						cache: false,
 						success: function() {
 							console.log('done');
-							window.location.replace('index.html');
+							$('.order-delivery, body').click(function(){
+							$('.order-delivery').removeClass('visible');
+								window.location.replace('index.html');
+							});
+							
 						}
 					});
 
 				});
+
+				
+
+
+
 				// $('body').click(function() {
 				// 	alert('hell00');
 					// $('#order-delivery').removeClass('visible');
