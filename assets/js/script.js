@@ -84,7 +84,7 @@ $(function() {
 				$(data.pizza).each(function(index, value) {
 					if($('.checkout').length > 0) {						
 						total.push(value.price.amount); 
-						all = '<li><img src='+value.image+' alt='+value.name+'><h3>'+value.name+'</h3><div><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span></div><span class="label">Quantity: </span><span class="label-value">1</span></li>';
+						all = '<li class="clearfix"><img src='+value.image+' alt='+value.name+'><div class="right-wrap"><h3>'+value.name+'</h3><div class="div-size"><span class="label">size: </span><span class="label-value">'+value.size+'</span></div><div><span class="label">price: </span><span class="label-value">'+value.price.amount+ ' ' +value.price.currency+'</span></div><span class="label">Quantity: </span><span class="label-value">1</span></div></li>';
 						$(all).appendTo('#pizza-order');
 						$('.empty').addClass('hidden');
 						$('.grand-total').addClass('visible');
