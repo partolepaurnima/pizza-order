@@ -99,6 +99,8 @@ header {
 
 header h1 { padding: 30px 0 30px; }
 
+header h1 img { width: 100%; }
+
 .left { float: left; }
 
 .right { float: right; }
@@ -452,14 +454,30 @@ footer {
 }
 
 .pizza-order li { 
- 	width: 25%;
+ 	width: 100%;
  	font-size: 14px;
  	display: block;
  	margin: 0;
- 	border: 1px solid #000;
  	padding: 10px;
  	margin-bottom: 20px;
+ 	text-align: left;
+ 	background: #e0d8d8;
 }
+
+.pizza-order li div {
+	margin-top: 3px 0;
+}
+
+.pizza-order li div span { font-size: 13px; }
+
+.pizza-order li .div-size { margin-top: 15px; }
+
+.pizza-order li img { 
+	width: 20%;
+	float: left;
+}
+
+.right-wrap { float: left; }
 
 .pizza-order li h3 { font-size: 15px; }
 
@@ -551,13 +569,27 @@ footer {
 		width: 70%;
 		margin-left: auto;
 		margin-right: auto;
+		box-sizing: border-box;
 	}
+
+	.pizza-order li { 
+		width: 80%;
+		text-align: center;
+	}
+
+	.pizza-order li img { 
+		width: 50%;
+		float: none;
+	}
+
+	.pizza-order li .right-wrap { float: none; }
 
 	.pizza-listing li:nth-of-type(3n - 2) { margin-left: auto; }
 
 	.pizza-menu .visible { display: block; }
 
-	.pizza-order li { width: 25%; }
+
+
 
 	.search-form input { width: 70%; }
 }
@@ -576,4 +608,11 @@ footer {
 
 	.social-share { margin-top: 20px; }
 
+}
+
+
+@media screen and (max-width: 340px) {
+	header .wrapper > .left {
+		width: 50%;
+	}
 }
